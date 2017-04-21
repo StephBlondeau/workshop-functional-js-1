@@ -12,9 +12,16 @@ var promiseStrings = new Promise(function (fulfill, reject) {
 })
 
 const asyncYolo = (input) => {
+  var numbers = promiseNumbers.then(console.log, null);
+  var strings = promiseStrings.then(console.log, null);
 
-  // Your future job begins here ...
+  return _.zip(numbers, parseStrings(strings))
+}
 
+var parseStrings = (input) =>{
+  return input.map(val =>{
+    return parseIn(val);
+  })
 }
 
 module.exports = {
