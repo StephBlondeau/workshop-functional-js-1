@@ -9,11 +9,9 @@ const zip = (input) => {
     return result;
   }else{
 
-    return input[0].map(function(item){
-      var tab = [];
-      tab.push(item);
-      return tab;
-    })
+    return input[0].map(function(_,i){
+          return input.map(function(input){return input[i]})
+      });
   }
 }
 
